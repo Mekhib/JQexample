@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Hw.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>Number to guess:<span id = "rndnum"></span></header>
+    <!-- values in HTML can ONLY be stored as strings! -->
+    <p id="p1">
+    Wins: <span id="W"></span>
+    </p>
+    <p id="p2">
+    losses: <span id="L"></span>
+    </p>
+    <div id="background">
+        <img src = "https://www.creditdonkey.com/image/1/blue-diamond-1200x628.jpg" class="Number" value="10" id="pic"/>
+        <!-- Move span tags!!!-->
+        <span id ="valclick"></span>
+        <img src = "https://files.whiteflash.com/images/rd/home/diamond.jpg" class="Number" value="1" id="pic2"/>
+        <span id ="valclick2"></span>
+        <img src = "https://img.etimg.com/thumb/msid-60130205,width-300,imgsize-54602,resizemode-4/soon-you-could-own-diamonds-by-investing-as-little-as-rs-900-a-month.jpg" class="Number" value="3" id="pic3"/>
+        <span id ="valclick3"></span>
+        <img src = "https://www.wpdiamonds.com/wp-content/uploads/2018/04/header-300x300.png" class="Number" value="5" id="pic4"/>
+        <span id ="valclick4"></span>
+    </div>
+    <script>
+   //varibale for player guess
+   var guess = Math.floor((Math.random() * 10));
+   var uguess = 0;
+   var wins = "";
+   var losses = "";
+   console.log(guess);
+   //assigning guess vairible to documnet
+   //append adds the VALUE to the element!
+  $("#rndnum").append(guess);//<--- variable made on line 18 is "appeneded" to the "header"(Jquery element)
+  $("#p1").append(wins);
+  $("#p2").append(losses);
+ // console.log(random);
+    // give the picturesvalue and displaying value on click
+   $(".Number").click(function() {
+            //Getting the interger value of my element. 
+            var store = $(this).attr("value");
+            console.log(store);
+            uguess = parseInt(store) + uguess;  
+            alert("value: " + uguess);
+            //ParseInt gets Number value from the store varible above. Userguess is going to equal the value of the picture plus value of last user guess.
+          
+            //taking the value of the number and displaying it on page(not complete)
+            $("#valclick").append(store);
+            $("#valclick2").append(store);
+            $("#valclick3").append(store);
+            $("#valclick4").append(store);
+          
+    if (guess === uguess){
+        wins++
+        console.log(wins);
+        alert("you win!");
+        //We also need to reset the game
+        
+    }
+    else if (uguess > guess) {
+        losses++
+        console.log(losses);
+        alert("You lose! try again")
+        //we need to reset the gmae
+    }
+    else{
+//continue running the function
+    }  
+    })
+
+ 
+//HELPHING POINTS:
+//IF ELSE STATEMENRS
+//Errors in values
+//appending values to page
+//appending wins/losses to page
+
+ 
+
+    </script>
+</body>
+</html>

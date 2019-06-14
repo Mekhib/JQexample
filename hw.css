@@ -1,0 +1,48 @@
+.Number{
+    width: 30%;
+}
+
+#background{
+ background-color: rebeccapurple;
+ border-radius: 25px;
+ padding: 20px; 
+ width: auto;
+ height: auto;
+}
+
+body{
+    background-image: url("https://images.pexels.com/photos/1292998/pexels-photo-1292998.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500")
+}
+
+#p1{
+    background-color: blueviolet;
+    width: 23%;
+    height: 42%;
+    padding: 21px;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+#p2{
+    background-color: blueviolet;
+    width: 23%;
+    height: 42%;
+    padding: 21px;
+    text-align: center;
+    font-size: 50px
+}
+
+
+header{
+    background-color: blueviolet;
+    width: 23%;
+    height: 42%;
+    padding: 21px;
+    text-align: center;
+    font-size: 50px
+}
+
+#pic{
+    height: 30%;
+}
