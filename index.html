@@ -38,8 +38,6 @@
    //assigning guess vairible to documnet
    //append adds the VALUE to the element!
   $("#rndnum").append(guess);//<--- variable made on line 18 is "appeneded" to the "header"(Jquery element)
-  $("#p1").append(wins);
-  $("#p2").append(losses);
  // console.log(random);
     // give the picturesvalue and displaying value on click
    $(".Number").click(function() {
@@ -57,14 +55,14 @@
             $("#valclick4").append(store);
           
     if (guess === uguess){
-        wins++
+        $("#p1").append(wins++);
         console.log(wins);
         alert("you win!");
         //We also need to reset the game
         
     }
     else if (uguess > guess) {
-        losses++
+        $("#p2").append(losses++);
         console.log(losses);
         alert("You lose! try again")
         //we need to reset the gmae
